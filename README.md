@@ -11,7 +11,9 @@ Virtualenv (for creating a virtual environment)
 ## Create a virtual environment and activate it:
 virtualenv venv
 
-source venv/bin/activate  # On Windows, use venv\Scripts\activate
+source venv/bin/activate 
+
+ On Windows, use venv\Scripts\activate
 
 ## Install the required packages:
 pip install -r requirements.txt
