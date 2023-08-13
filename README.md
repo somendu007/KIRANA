@@ -23,6 +23,17 @@ pip install -r requirements.txt
 python app.py
 ## Open a web browser and navigate to http://127.0.0.1:5000 to access the app.
 
+# Login details
+## admin login
+Username: admin@gmail.com
+
+password: admin123
+
+## user login
+Username: user@gmail.com
+
+password: user123
+
 # Technologies Used
 Flask
 
