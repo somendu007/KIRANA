@@ -4,12 +4,12 @@ This is an Online Grocery Store Web Application built using the Flask web framew
 # Getting Started
 ## Prerequisites
 Python 3.x
-
 Virtualenv (for creating a virtual environment)
 
 # Installation
 ## Create a virtual environment and activate it:
 virtualenv venv
+
 source venv/bin/activate  # On Windows, use venv\Scripts\activate
 
 ## Install the required packages:
