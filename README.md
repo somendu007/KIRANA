@@ -4,6 +4,7 @@ This is an Online Grocery Store Web Application built using the Flask web framew
 # Getting Started
 ## Prerequisites
 Python 3.x
+
 Virtualenv (for creating a virtual environment)
 
 # Installation
