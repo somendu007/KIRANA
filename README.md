@@ -25,24 +25,36 @@ python app.py
 
 # Technologies Used
 Flask
+
 SQLite
+
 HTML/CSS
+
 Jinja2
+
 Flask-WTF
+
 Flask-Session
 
 # Project Structure
 The project follows this directory structure:
 
 templates/: HTML templates
+
 static/: Static files (CSS, JS, images)
+
 app.py: Entry point for running the app
 
 # Features
 User registration and authentication
+
 Product browsing and searching
+
 Category display
+
 Cart management
+
 Order placement
+
 Administrator functionalities for managing products and categories
 
