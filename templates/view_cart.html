@@ -1,0 +1,44 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Cart</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Product Name</th>
+      <th>Price</th>
+      <th>Quantity</th>
+      <th>Unit</th>
+      <th>Subtotal</th>
+      <th>Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for item in cart_items %}
+    <tr>
+      <td>{{ item[1] }}</td>
+      <td>{{ item[2] }}</td>
+      <td>{{ item[3] }}</td>
+      <td>{{ item[5] }}</td>
+      <td>{{ item[4] }}</td>
+      <td>
+        <!-- Remove button to remove item from the cart -->
+        <form action="{{ url_for('remove_from_cart', product_id=item[0]) }}" method="post">
+            <button type="submit">Remove</button>
+        </form>
+    </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="4" class="text-right">Total:</td>
+      <td><b>&#8377;{{ total_price }}</b></td>
+    </tr>
+  </tfoot>
+</table>
+<form method="POST" action="{{ url_for('checkout') }}">
+  <button type="submit" class="btn btn-primary">Checkout</button>
+</form>
+{% endblock %}
+
