@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h2>Products in Category: {{ category_name }}</h2>
+
+    <form action="{{ url_for('user_dashboard', username='username') }}" method="get">
+        <button type="submit" class="btn btn-primary">Back to Dashboard</button>
+    </form>
+
+    {% if products %}
+        <ul>
+            {% for product in products %}
+                <li>
+                    {{ product[1] }} - Price: Rs {{ product[2] }} - Quantity: {{ product[3] }} - Unit: {{ product[5] }} 
+                    <form method="post" action="{{ url_for('add_to_cart') }}">
+                        <input type="hidden" name="product_id" value="{{ product[0] }}">
+                        <input type="number" name="quantity" placeholder="Quantity" min="1" required>
+                        <button type="submit">Add to Cart</button>
+                    </form>
+                </li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No products in this category.</p>
+    {% endif %}
+
+    <form action="/user/cart" method="get">
+        <button type="submit" class="btn btn-primary">Go to cart</button>
+    </form>
+    <p>             </p>
+    <form action="/" method="get">
+        <button type="submit" class="btn btn-primary">Logout</button>
+    </form>    
+
+{% endblock %}
